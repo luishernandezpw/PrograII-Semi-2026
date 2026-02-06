@@ -3,6 +3,7 @@ package com.ugb.miprimeraapp;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,6 +22,7 @@ Raiz
 public class MainActivity extends AppCompatActivity {
     TextView tempVal;
     Button btn;
+    RadioGroup radioGroup;
     RadioButton opt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,20 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
         double respuesta = 0;
 
-        opt = findViewById(R.id.optSuma);
-        if(opt.isChecked()) {
+        radioGroup = findViewById(R.id.optOpciones);
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optSuma) {
             respuesta = num1 + num2;
         }
-        opt = findViewById(R.id.optResta);
-        if(opt.isChecked()){
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optResta) {
             respuesta = num1 - num2;
         }
-        opt = findViewById(R.id.optMultiplicar);
-        if(opt.isChecked()){
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optMultiplicar) {
             respuesta = num1 * num2;
         }
-        opt = findViewById(R.id.optDividir);
-        if(opt.isChecked()){
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optDividir) {
             respuesta = num1 / num2;
         }
         tempVal = findViewById(R.id.lblRespuesta);
