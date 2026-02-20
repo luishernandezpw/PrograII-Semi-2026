@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 double y = sensorEvent.values[1];
                 double z = sensorEvent.values[2];
                 tempVal.setText("Desplazamiento: X: "+ x +"\n; Y: "+y +"\n; Z: "+z);
-
             }
             @Override
             public void onAccuracyChanged(Sensor sensor, int i) {
