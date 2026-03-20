@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.ugb.miprimeraapp"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.ugb.miprimeraapp"
